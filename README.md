@@ -1,2 +1,2 @@
-# projeto-html-css-js-ia
+# projeto-fundo-magico
 projeto realizado com o canal dem em dobro
