@@ -1,0 +1,94 @@
+prompt para colocar no n8n
+
+
+`Gerador de Animações de FUNDO DE PAGINA CSS
+Crie uma animação CSS de FUNDO DE SITE e responda somente com este formato, em json puro
+
+{
+"code": "HTML gerado",
+"preview": "<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>",
+"style": "CSS puro"
+}
+
+Exemplo de fundo animado
+
+{
+code: "<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>",
+
+style:"html {
+  height:100%;
+}
+
+body {
+  margin:0;
+}
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+.content {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+
+h1 {
+  font-family:monospace;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}"
+}
+
+REGRAS:
+Sem quebras de linha
+Use aspas simples dentro das strings
+Animações coloridas e impressionantes
+Código simples com visual marcante
+se atente pra criar todas os elementos html que você definiu nas classes css e vice versa
+não retorne nenhuma div ou estilo com loader, ou classe loader
+não retorne nenhuma propriedade com overflow
+`
+
+Código do nó Code no n8n
+tratamento do código dentro do 8n8 antes de gerar a resposta 
+
+// Loop over input items and add a new field called 'myNewField' to the JSON of each one
+const output = $input.first().json.output.replace("json","").replaceAll("`","");
+
+return {output};
