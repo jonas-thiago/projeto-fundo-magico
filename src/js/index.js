@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function(){
             }
 
         }catch (error){
-            console.error('Erro ao gerar o background:', error);
+            console.error('Erro ao gerar o fundo:', error);
             htmlCode.textContent = 'Erro ao gerar o código HTML. Tente novamente.';
             cssCode.textContent = 'Erro ao gerar o código CSS. Tente novamente.';
             preview.innerHTML = '<p>Erro ao carregar o preview. Tente novamente.</p>';
@@ -89,5 +89,4 @@ document.addEventListener('DOMContentLoaded', function(){
             setLoading(false);
         }
     });
-
 });
